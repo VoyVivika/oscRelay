@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bfsx27afcqkxm"]
+
+[ext_resource type="Script" uid="uid://boyrkdai2a0xt" path="res://scripts/CreateNodeWindowManager.cs" id="1_0gbb4"]
+
+[node name="CreateNode" type="Window" unique_id=1783854119 node_paths=PackedStringArray("tree", "AddButton", "CancelButton")]
+oversampling_override = 1.0
+title = "Add Node"
+initial_position = 1
+size = Vector2i(960, 540)
+transient = true
+exclusive = true
+minimize_disabled = true
+force_native = true
+script = ExtResource("1_0gbb4")
+tree = NodePath("VBoxContainer/Tree")
+AddButton = NodePath("VBoxContainer/HBoxContainer/Add")
+CancelButton = NodePath("VBoxContainer/HBoxContainer/Cancel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=993036898]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tree" type="Tree" parent="VBoxContainer" unique_id=30234622]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=657182934]
+layout_mode = 2
+alignment = 1
+
+[node name="Add" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=298302048]
+layout_mode = 2
+text = "Add Node to Graph"
+
+[node name="Cancel" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1403038289]
+layout_mode = 2
+text = "Cancel"
